@@ -1,33 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiolQR</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body onload="background_generate();background_animation();">
+    <div id="content">
+      <div id="content1" style="//visibility:hidden;">
+        <div class="step">Krok <span class="step_index">1</span></div>
 
+        <div class="instructions" id="instructions1">
+          zeskanuj poniższy kod QR, aby przejść do pierwszej zagadki
+        </div>
 
-<div id="content">
+        <div class="glass_qr">
+          <div class="qr">
+            <img class="qr_picture" src="example_qr_code.jpg" />
+          </div>
+        </div>
+      </div>
 
+      <div id="content2" style="visibility: hidden">
+        <div class="step">Krok <span class="step_index">2</span></div>
 
+        <div class="instructions" id="instructions2">
+          wprowadź kod z rozwiązania pierwszej zagadki
+        </div>
 
-    <div id="title"><p>Krok 1</p></div>
+        <input
+          id="input1"
+          type="text"
+          class="inputs"
+          onclick="remove_base_input();"
+          value="XXXXXX"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </div>
 
-    <div id="instruction"><p>Zeskanuj poniższy kod QR, aby przejść do pierwszego etapu.</p></div>
+      <div id="content3" style="visibility: hidden">
+        <div class="step">Krok <span class="step_index">3</span></div>
 
-    <div id="qr_spot">
+        <div class="instructions" id="instructions3">
+          zeskanuj poniższy kod QR, aby przejść do pierwszej zagadki
+        </div>
 
-        <div id="qr"></div>
-
+        <div class="glass_qr">
+          <div class="qr">
+            <img class="qr_picture" src="example_qr_code.jpg" />
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div id="button_next" onclick="next_step();">
+      <div class="button_background">
+        <div id="button_arrow">
+          <svg
+            width="36"
+            height="24"
+            viewBox="0 0 36 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807612 23.9792 0.807612 23.3934 1.3934C22.8076 1.97918 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM2 13.5H34V10.5H2V13.5Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
 
-
-    <div id="right_arrow_button"> > </div>
-
-
-</div>
-
-
-</body>
+    <div id="background"></div>
+    <script src="script.js"></script>
+  </body>
 </html>

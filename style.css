@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background: #1a1d1a;
+
+  height: 100vh;
+}
+
+#content {
+  z-index: 1;
+
+  transform: translate(0%, 16vh);
+}
+
+#content1 {
+}
+
+#content2 {
+}
+
+#content3 {
+  margin-top: -250px;
+}
+
+.step {
+  font-family: "Work Sans";
+
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 600;
+  text-shadow: 0px 0px 12.2px #ffffff80;
+
+  text-align: center;
+}
+
+.step_index {
+  color: #329f35;
+
+  text-shadow: 0px 0px 12.2px #329f3580;
+}
+
+.qr_picture {
+  width: 280px;
+
+  height: 280px;
+}
+
+.qr {
+  width: 280px;
+
+  height: 280px;
+
+  position: relative;
+
+  top: calc((337px / 2) - (280px / 2));
+
+  margin-left: calc(50% - (280px / 2));
+}
+
+.glass_qr {
+  background: #0b0b0ba8;
+
+  border-radius: 17px;
+
+  backdrop-filter: blur(1px);
+
+  width: 337px;
+
+  height: 337px;
+
+  margin-top: 0px;
+
+  box-shadow: 4px 4px 4px 2px #00000019;
+
+  position: absolute;
+
+  left: calc(50% - (337px / 2));
+
+  margin-top: 155px;
+}
+
+.instructions {
+  font-size: 20px;
+  color: #e8e8e8;
+
+  font-weight: 378;
+
+  letter-spacing: 1px;
+
+  font-family: "Work Sans";
+
+  //text-align: center;
+
+  margin-top: 50px;
+}
+
+.leaves {
+  transition: all 0.3s;
+}
+
+#instructions1 {
+  width: 568px;
+
+  position: absolute;
+
+  left: calc(50% - (568px / 2));
+}
+
+#instructions2 {
+  text-align: center;
+}
+
+#instructions3 {
+  width: 568px;
+
+  position: absolute;
+
+  left: calc(50% - (568px / 2));
+}
+
+.inputs {
+  height: 53px;
+  width: 277px;
+
+  border-radius: 67px;
+
+  border: none;
+
+  outline: none;
+
+  background: #0b0b0ba8;
+
+  backdrop-filter: blur(1px);
+
+  box-shadow: 4px 4px 4px 2px #00000029;
+
+  position: absolute;
+
+  left: calc(50% - (277px / 2));
+
+  margin-top: 60px;
+
+  font-size: 22px;
+
+  font-family: "Work Sans";
+
+  color: #737373;
+
+  text-indent: 14px;
+}
+
+.button_background {
+  width: 66px;
+
+  height: 66px;
+
+  border-radius: 100px;
+
+  background: #329f35;
+}
+
+#button_next {
+  position: absolute;
+
+  top: calc(100vh - 66px - 50px);
+
+  left: calc(70vw - 66px);
+}
+
+#button_arrow {
+  position: relative;
+
+  left: calc(50% - (36px / 2));
+
+  top: calc(50% - (24px / 2));
+}
