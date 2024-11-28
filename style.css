@@ -2,6 +2,7 @@
 
 body {
   background: #1a1d1a;
+  font-family: "Work Sans";
 
   height: 100vh;
 }
@@ -23,7 +24,6 @@ body {
 }
 
 .step {
-  font-family: "Work Sans";
 
   color: #ffffff;
   font-size: 70px;
@@ -75,8 +75,6 @@ body {
   position: absolute;
 
   left: calc(50% - (337px / 2));
-
-  margin-top: 155px;
 }
 
 .instructions {
@@ -86,10 +84,6 @@ body {
   font-weight: 378;
 
   letter-spacing: 1px;
-
-  font-family: "Work Sans";
-
-  //text-align: center;
 
   margin-top: 50px;
 }
@@ -141,8 +135,6 @@ body {
   margin-top: 60px;
 
   font-size: 22px;
-
-  font-family: "Work Sans";
 
   color: #737373;
 
