@@ -49,7 +49,7 @@ body {
   backdrop-filter: blur(1px);
   width: 337px;
   height: 337px;
-  margin-top: 0px;
+  margin-top: 155px;
   box-shadow: 4px 4px 4px 2px #00000019;
   position: absolute;
   left: calc(50% - (337px / 2));
