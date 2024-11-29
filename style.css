@@ -2,14 +2,14 @@
 
 body {
   background: #1a1d1a;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
   overflow: hidden;
   height: 100vh;
+  margin: 0;
 }
 
 #content {
   z-index: 1;
-
   transform: translate(0%, 16vh);
 }
 
@@ -22,62 +22,44 @@ body {
   font-size: 70px;
   font-weight: 600;
   text-shadow: 0px 0px 12.2px #ffffff80;
-
   text-align: center;
 }
 
 .step_index {
   color: #329f35;
-
   text-shadow: 0px 0px 12.2px #329f3580;
 }
 
 .qr_picture {
   width: 280px;
-
   height: 280px;
 }
 
 .qr {
   width: 280px;
-
   height: 280px;
-
   position: relative;
-
   top: calc((337px / 2) - (280px / 2));
-
   margin-left: calc(50% - (280px / 2));
 }
 
 .glass_qr {
   background: #0b0b0ba8;
-
   border-radius: 17px;
-
   backdrop-filter: blur(1px);
-
   width: 337px;
-
   height: 337px;
-
   margin-top: 0px;
-
   box-shadow: 4px 4px 4px 2px #00000019;
-
   position: absolute;
-
   left: calc(50% - (337px / 2));
 }
 
 .instructions {
   font-size: 20px;
   color: #e8e8e8;
-
   font-weight: 378;
-
   letter-spacing: 1px;
-
   margin-top: 50px;
 }
 
@@ -87,9 +69,7 @@ body {
 
 #instructions1 {
   width: 568px;
-
   position: absolute;
-
   left: calc(50% - (568px / 2));
 }
 
@@ -99,38 +79,24 @@ body {
 
 #instructions3 {
   width: 568px;
-
   position: absolute;
-
   left: calc(50% - (568px / 2));
 }
 
 .inputs {
   height: 53px;
   width: 277px;
-
   border-radius: 67px;
-
   border: none;
-
   outline: none;
-
   background: #0b0b0ba8;
-
   backdrop-filter: blur(1px);
-
   box-shadow: 4px 4px 4px 2px #00000029;
-
   position: absolute;
-
   left: calc(50% - (277px / 2));
-
   margin-top: 60px;
-
   font-size: 22px;
-
   color: #737373;
-
   text-indent: 14px;
 }
 
@@ -146,27 +112,20 @@ body {
 
 .button_background {
   width: 66px;
-
   height: 66px;
-
   border-radius: 100px;
-
   background: #329f35;
 }
 
 #button_next {
   position: absolute;
-
   top: calc(100vh - 66px - 50px);
-
   left: calc(70vw - 66px);
 }
 
 #button_arrow {
   position: relative;
-
   left: calc(50% - (36px / 2));
-
   top: calc(50% - (24px / 2));
 }
 
