@@ -110,9 +110,6 @@ function background_generate() {
 }
 
 function background_animation() {
-  //document.getElementById("l_"+index).querySelector('path').style.fill = "green";
-  //document.getElementById("l_"+index).querySelector('.leaf_outline').style.fill = "none";
-  //document.getElementById("l_"+index).querySelector('path').style.stroke = "green";
 
   window.addEventListener("mousemove", function (e) {
     for (var i = 0; i < id_index + 1; i++) {
@@ -122,36 +119,15 @@ function background_animation() {
 
       var element_y = parseInt(document.getElementById("l_" + i).style.top);
 
-      //console.log(element_x, element_y);
-
-      //console.log(element_x > e.clientX - 200);
-
-      //console.log(parseInt(element_x));
-
-      //console.log(e.clientX - 200);
-
-      //console.log(element_x >! e.clientX);
-
-      //console.log(e.clientY);
-
-      //if(element_x > e.clientX - 100 && element_x < e.clientX  &&  element_y > (e.clientY - 100)  &&  element_y < (e.clientY + 100)){
-
       if (
         element_x > e.clientX - 100 &&
         element_x < e.clientX &&
         element_y > e.clientY - 100 &&
         element_y < e.clientY + 100
       ) {
-        //console.log("a");
 
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "#1e361e";
-
-        //document.getElementById("l_"+i).style.transform = "translateX(50px)";
-
-        //document.getElementById("l_"+i).style.transform = "translateX( -" + String( parseInt( element_x - (e.clientX - 100) )) + "px )";
-
-        //document.getElementById("l_"+i).style.transform = "translateX( " + String( parseInt( -100 + (e.clientX - element_x) )) + "px )";
 
         document.getElementById("l_" + i).style.transform =
           "translateX( " +
@@ -163,22 +139,15 @@ function background_animation() {
           "px )    rotate( " +
           String(parseInt(Math.floor(Math.random() * (15 - -15 + 1)) + -15)) +
           "deg )";
-
-        //document.getElementById("l_"+i).style.transform = "rotate( " + String( parseInt( Math.floor(Math.random() * (15 - (-15) + 1)) + (-15)  )) + "deg )";
+        
       } else if (
         element_x < e.clientX + 100 &&
         element_x > e.clientX &&
         element_y > e.clientY - 100 &&
         element_y < e.clientY + 100
       ) {
-        //console.log("a");
-
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "#1e361e";
-
-        //document.getElementById("l_"+i).style.transform = "translateX(50px)";
-
-        //document.getElementById("l_"+i).style.transform = "translateX( " + String( parseInt( 100 - (element_x - e.clientX) )) + "px )";
 
         document.getElementById("l_" + i).style.transform =
           "translateX( " +
@@ -190,8 +159,7 @@ function background_animation() {
           "px )   rotate( " +
           String(parseInt(Math.floor(Math.random() * (15 - -15 + 1)) + -15)) +
           "deg ) ";
-
-        //document.getElementById("l_"+i).style.transform = "rotate( " + String( parseInt( Math.floor(Math.random() * (15 - (-15) + 1)) + (-15)  )) + "deg )";
+        
       } else {
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "none";
