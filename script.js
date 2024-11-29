@@ -10,7 +10,9 @@ function next_step() {
   if (steps_on_password.includes(current_step)) {
     check_password(current_step);
   } else {
-    load_step(current_step + 1);
+    if (current_step + 1 <= steps - 1) {
+      load_step(current_step + 1);
+    }
   }
 }
 
@@ -60,6 +62,16 @@ function check_password(step_to_check) {
     document.getElementById(
       "input" + String(parseInt(steps_on_password.indexOf(step_to_check) + 1))
     ).style.boxShadow = "0px 0px 4px 3px #7C000029";
+
+    document.getElementById(
+      "input" +
+        String(parseInt(steps_on_password.indexOf(step_to_check) + 1)) +
+        "_return"
+    ).innerHTML = "wprowadzono nie prawidłowe hasło";
+
+    document.getElementById(
+      "input" + String(parseInt(steps_on_password.indexOf(step_to_check) + 1))
+    ).style.animation = "incorrect_input_shake 0.4s";
   }
 }
 

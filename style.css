@@ -3,7 +3,7 @@
 body {
   background: #1a1d1a;
   font-family: "Work Sans";
-
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -13,18 +13,11 @@ body {
   transform: translate(0%, 16vh);
 }
 
-#content1 {
-}
-
-#content2 {
-}
-
 #content3 {
   margin-top: -250px;
 }
 
 .step {
-
   color: #ffffff;
   font-size: 70px;
   font-weight: 600;
@@ -141,6 +134,16 @@ body {
   text-indent: 14px;
 }
 
+.input_returns {
+  color: #737373;
+
+  font-size: 15px;
+
+  text-align: center;
+
+  margin-top: 135px;
+}
+
 .button_background {
   width: 66px;
 
@@ -165,4 +168,64 @@ body {
   left: calc(50% - (36px / 2));
 
   top: calc(50% - (24px / 2));
+}
+
+@media (max-width: 452px) {
+  #button_next {
+    position: absolute;
+
+    top: calc(100vh - 66px - 60px);
+
+    left: calc(95vw - 66px);
+  }
+
+  #background {
+    position: relative;
+    left: 20px;
+    top: 0px;
+
+    margin-top: 0px;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  #instructions1 {
+    width: 400px;
+
+    margin-left: 115px;
+  }
+
+  #instructions3 {
+    width: 400px;
+
+    margin-left: 115px;
+  }
+
+  #content1 {
+    margin-top: -100px;
+  }
+
+  #content3 {
+    margin-top: -385px;
+  }
+}
+
+@keyframes incorrect_input_shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  33% {
+    transform: translate(-20px, 0px);
+  }
+
+  66% {
+    transform: translate(20px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
