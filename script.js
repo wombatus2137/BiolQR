@@ -63,18 +63,6 @@ function check_password(step_to_check) {
   }
 }
 
-var remove_base_input_v = 0;
-
-function remove_base_input() {
-  if (remove_base_input_v == 0) {
-    remove_base_input_v = 1;
-
-    document.getElementById("input1").value = "";
-
-    document.getElementById("input1").style.color = "#E8E8E8";
-  }
-}
-
 function background_generate() {
   var background_div = "";
 
