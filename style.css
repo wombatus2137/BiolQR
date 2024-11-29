@@ -1,65 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   background: #1a1d1a;
-  font-family: "Work Sans", sans-serif;
-  overflow: hidden;
+  font-family: "Work Sans";
+
   height: 100vh;
-  margin: 0;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #content {
   z-index: 1;
+
   transform: translate(0%, 16vh);
 }
 
+#content1 {
+}
+
+#content2 {
+}
+
 #content3 {
-  margin-top: -250px;
+  margin-top: -385px;
 }
 
 .step {
+
   color: #ffffff;
   font-size: 70px;
   font-weight: 600;
   text-shadow: 0px 0px 12.2px #ffffff80;
+
   text-align: center;
 }
 
 .step_index {
   color: #329f35;
+
   text-shadow: 0px 0px 12.2px #329f3580;
 }
 
 .qr_picture {
   width: 280px;
+
   height: 280px;
 }
 
 .qr {
   width: 280px;
+
   height: 280px;
+
   position: relative;
+
   top: calc((337px / 2) - (280px / 2));
+
   margin-left: calc(50% - (280px / 2));
 }
 
 .glass_qr {
   background: #0b0b0ba8;
+
   border-radius: 17px;
+
   backdrop-filter: blur(1px);
+
   width: 337px;
+
   height: 337px;
+
   margin-top: 155px;
+
   box-shadow: 4px 4px 4px 2px #00000019;
+
   position: absolute;
+
   left: calc(50% - (337px / 2));
 }
 
 .instructions {
   font-size: 20px;
   color: #e8e8e8;
+
   font-weight: 378;
+
   letter-spacing: 1px;
+
   margin-top: 50px;
 }
 
@@ -69,7 +98,9 @@ body {
 
 #instructions1 {
   width: 568px;
+
   position: absolute;
+
   left: calc(50% - (568px / 2));
 }
 
@@ -79,53 +110,79 @@ body {
 
 #instructions3 {
   width: 568px;
+
   position: absolute;
+
   left: calc(50% - (568px / 2));
 }
 
 .inputs {
   height: 53px;
   width: 277px;
+
   border-radius: 67px;
+
   border: none;
+
   outline: none;
+
   background: #0b0b0ba8;
+
   backdrop-filter: blur(1px);
+
   box-shadow: 4px 4px 4px 2px #00000029;
+
   position: absolute;
+
   left: calc(50% - (277px / 2));
+
   margin-top: 60px;
+
   font-size: 22px;
-  color: #E8E8E8;
+
+  color: #737373;
+
   text-indent: 14px;
 }
 
-.input_returns {
-  color: #737373;
+.input_returns{
 
-  font-size: 15px;
+    color: #737373;
 
-  text-align: center;
+    font-size: 15px;
 
-  margin-top: 135px;
+    text-align: center;
+
+    margin-top: 135px;
+
+
+
+
 }
 
 .button_background {
   width: 66px;
+
   height: 66px;
+
   border-radius: 100px;
+
   background: #329f35;
 }
 
 #button_next {
   position: absolute;
+
   top: calc(100vh - 66px - 50px);
+
   left: calc(70vw - 66px);
 }
 
 #button_arrow {
   position: relative;
+
   left: calc(50% - (36px / 2));
+
   top: calc(50% - (24px / 2));
 }
 
@@ -188,3 +245,44 @@ body {
     transform: translate(0px, 0px);
   }
 }
+
+
+@keyframes incorrect_input_shake{
+
+
+    0%{
+
+
+        transform: translate(0px, 0px);
+
+
+    }
+
+    33%{
+
+
+        transform: translate(-20px, 0px);
+
+
+    }
+
+
+    66%{
+
+
+        transform: translate(20px, 0px);
+
+
+     }
+
+
+    100%{
+
+        transform: translate(0px, 0px);
+
+    }
+
+
+
+}
+

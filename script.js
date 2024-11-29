@@ -1,8 +1,10 @@
-var id_index = -1;
+    var id_index = -1;
 
 var current_step = 0;
 
 var steps_on_password = [1]; // contains indexes of every step that you type password into
+
+var steps = 3;
 
 var passwords = ["ABC"];
 
@@ -72,6 +74,21 @@ function check_password(step_to_check) {
     document.getElementById(
       "input" + String(parseInt(steps_on_password.indexOf(step_to_check) + 1))
     ).style.animation = "incorrect_input_shake 0.4s";
+    document.getElementById("input"+ String(parseInt(steps_on_password.indexOf(step_to_check) + 1)) + "_return").innerHTML = "wprowadzono nie prawidłowe hasło";
+
+    document.getElementById("input"+ String(parseInt(steps_on_password.indexOf(step_to_check) + 1))).style.animation = "incorrect_input_shake 0.4s";
+  }
+}
+
+var remove_base_input_v = 0;
+
+function remove_base_input() {
+  if (remove_base_input_v == 0) {
+    remove_base_input_v = 1;
+
+    document.getElementById("input1").value = "";
+
+    document.getElementById("input1").style.color = "#E8E8E8";
   }
 }
 
@@ -110,6 +127,9 @@ function background_generate() {
 }
 
 function background_animation() {
+  //document.getElementById("l_"+index).querySelector('path').style.fill = "green";
+  //document.getElementById("l_"+index).querySelector('.leaf_outline').style.fill = "none";
+  //document.getElementById("l_"+index).querySelector('path').style.stroke = "green";
 
   window.addEventListener("mousemove", function (e) {
     for (var i = 0; i < id_index + 1; i++) {
@@ -119,15 +139,36 @@ function background_animation() {
 
       var element_y = parseInt(document.getElementById("l_" + i).style.top);
 
+      //console.log(element_x, element_y);
+
+      //console.log(element_x > e.clientX - 200);
+
+      //console.log(parseInt(element_x));
+
+      //console.log(e.clientX - 200);
+
+      //console.log(element_x >! e.clientX);
+
+      //console.log(e.clientY);
+
+      //if(element_x > e.clientX - 100 && element_x < e.clientX  &&  element_y > (e.clientY - 100)  &&  element_y < (e.clientY + 100)){
+
       if (
         element_x > e.clientX - 100 &&
         element_x < e.clientX &&
         element_y > e.clientY - 100 &&
         element_y < e.clientY + 100
       ) {
+        //console.log("a");
 
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "#1e361e";
+
+        //document.getElementById("l_"+i).style.transform = "translateX(50px)";
+
+        //document.getElementById("l_"+i).style.transform = "translateX( -" + String( parseInt( element_x - (e.clientX - 100) )) + "px )";
+
+        //document.getElementById("l_"+i).style.transform = "translateX( " + String( parseInt( -100 + (e.clientX - element_x) )) + "px )";
 
         document.getElementById("l_" + i).style.transform =
           "translateX( " +
@@ -139,15 +180,22 @@ function background_animation() {
           "px )    rotate( " +
           String(parseInt(Math.floor(Math.random() * (15 - -15 + 1)) + -15)) +
           "deg )";
-        
+
+        //document.getElementById("l_"+i).style.transform = "rotate( " + String( parseInt( Math.floor(Math.random() * (15 - (-15) + 1)) + (-15)  )) + "deg )";
       } else if (
         element_x < e.clientX + 100 &&
         element_x > e.clientX &&
         element_y > e.clientY - 100 &&
         element_y < e.clientY + 100
       ) {
+        //console.log("a");
+
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "#1e361e";
+
+        //document.getElementById("l_"+i).style.transform = "translateX(50px)";
+
+        //document.getElementById("l_"+i).style.transform = "translateX( " + String( parseInt( 100 - (element_x - e.clientX) )) + "px )";
 
         document.getElementById("l_" + i).style.transform =
           "translateX( " +
@@ -159,7 +207,8 @@ function background_animation() {
           "px )   rotate( " +
           String(parseInt(Math.floor(Math.random() * (15 - -15 + 1)) + -15)) +
           "deg ) ";
-        
+
+        //document.getElementById("l_"+i).style.transform = "rotate( " + String( parseInt( Math.floor(Math.random() * (15 - (-15) + 1)) + (-15)  )) + "deg )";
       } else {
         document.getElementById("l_" + i).querySelector("path").style.fill =
           "none";
@@ -169,3 +218,5 @@ function background_animation() {
     }
   });
 }
+
+
