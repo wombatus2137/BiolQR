@@ -11,11 +11,9 @@ var passwords = ["ABC"];
 function next_step() {
   if (steps_on_password.includes(current_step)) {
     check_password(current_step);
-  } else {
-    if (current_step + 1 <= steps - 1) {
+  } else if (current_step + 1 <= steps - 1) {
       load_step(current_step + 1);
     }
-  }
 }
 
 function load_step(step_to_load) {
