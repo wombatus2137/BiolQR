@@ -6,7 +6,7 @@ var steps_on_password = [1]; // contains indexes of every step that you type pas
 
 var steps = 3;
 
-var passwords = ["ABC"];
+var passwords = ["ABC", "TULIPAN"];
 
 function next_step() {
   if (steps_on_password.includes(current_step)) {
@@ -81,18 +81,6 @@ function check_password(step_to_check) {
     document.getElementById(
       "input" + String(parseInt(steps_on_password.indexOf(step_to_check) + 1))
     ).style.animation = "incorrect_input_shake 0.4s";
-  }
-}
-
-var remove_base_input_v = 0;
-
-function remove_base_input() {
-  if (remove_base_input_v == 0) {
-    remove_base_input_v = 1;
-
-    document.getElementById("input1").value = "";
-
-    document.getElementById("input1").style.color = "#E8E8E8";
   }
 }
 

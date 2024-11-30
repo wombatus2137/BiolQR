@@ -9,6 +9,8 @@
   </head>
   <body onload="background_generate();background_animation();">
     <div id="content">
+      
+      <!-- start content1 -->
       <div id="content1">
         <div class="step">Krok <span class="step_index">1</span></div>
         <div class="instructions" id="instructions1">
@@ -16,25 +18,28 @@
         </div>
         <div class="glass_qr">
           <div class="qr">
-            <img class="qr_picture" src="example_qr_code.jpg" alt="QR" />
+            <img class="qr_picture qr_fix" src="/Puzzles/puzzleqr.png" alt="QR" />
           </div>
         </div>
       </div>
+
+      <!-- start content2 -->
       <div id="content2" style="visibility: hidden">
         <div class="step">Krok <span class="step_index">2</span></div>
         <div class="instructions" id="instructions2">
           wprowadź kod z rozwiązania pierwszej zagadki
         </div>
         <input
-          id="input1"
-          type="text"
-          class="inputs"
-          onclick="remove_base_input();"
-          value="XXXXXX"
-          oninput="this.value = this.value.toUpperCase()"
+        id="input1"
+        type="text"
+        class="inputs"
+        placeholder="XXXXXX"
+        oninput="this.value = this.value.toUpperCase()"
         />
         <div id="input1_return" class="input_returns"></div>
       </div>
+
+      <!-- start content3 -->
       <div id="content3" style="visibility: hidden">
         <div class="step">Krok <span class="step_index">3</span></div>
         <div class="instructions" id="instructions3">
@@ -46,6 +51,9 @@
           </div>
         </div>
       </div>
+
+      <!-- start content4 -->
+
     </div>
     <div id="button_next" onclick="next_step();">
       <div class="button_background">

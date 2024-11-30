@@ -102,7 +102,7 @@ body {
   left: calc(50% - (277px / 2));
   margin-top: 60px;
   font-size: 22px;
-  color: #737373;
+  color: #E8E8E8;
   text-indent: 14px;
 }
 
@@ -130,6 +130,16 @@ body {
   position: relative;
   left: calc(50% - (36px / 2));
   top: calc(50% - (24px / 2));
+}
+
+.qr_fix {
+  image-rendering: crisp-edges;
+}
+
+@supports not (image-rendering: crisp-edges) {
+  .qr_fix {
+      image-rendering: pixelated;
+  }
 }
 
 @media (max-width: 452px) {
