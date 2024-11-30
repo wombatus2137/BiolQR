@@ -6,7 +6,7 @@ var steps_on_password = [1]; // contains indexes of every step that you type pas
 
 var steps = 3;
 
-var passwords = ["ABC", "TULIPAN"];
+var passwords = ["BUCCFRDR", "TULIPAN"];
 
 function next_step() {
   if (steps_on_password.includes(current_step)) {
