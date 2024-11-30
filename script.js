@@ -4,7 +4,7 @@ var current_step = 0;
 
 var steps_on_password = [1]; // contains indexes of every step that you type password into
 
-var steps = 3;
+var steps = 4;
 
 var passwords = ["BUCCFRDR", "TULIPAN"];
 
