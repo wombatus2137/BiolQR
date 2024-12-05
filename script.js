@@ -2,11 +2,11 @@ var id_index = -1;
 
 var current_step = 0;
 
-var steps_on_password = [1]; // contains indexes of every step that you type password into
+var steps_on_password = [1, 3, 5, 7]; // contains indexes of every step that you type password into (starts with 0)
 
-var steps = 4;
+var steps = 9;
 
-var passwords = ["BUCCFRDR", "TULIPAN"];
+var passwords = ["BUCCFRDR", "TULIPAN", "MFCJRACTHSTTDAWGC", ""];
 
 function next_step() {
   if (steps_on_password.includes(current_step)) {
@@ -29,11 +29,9 @@ function load_step(step_to_load) {
   document.getElementById(
     "content" + String(parseInt(step_to_load))
   ).style.opacity = "0";
-
   document.getElementById(
     "content" + String(parseInt(step_to_load + 1))
   ).style.transition = "0s";
-  //document.getElementById("content"+String( parseInt(step_to_load+1))).style.opacity = "0";
   document.getElementById(
     "content" + String(parseInt(step_to_load + 1))
   ).style.visibility = "visible";

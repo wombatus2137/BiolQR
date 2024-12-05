@@ -13,13 +13,15 @@ body {
   transform: translate(0%, 16vh);
 }
 
-#content1 {
-}
-
-#content2 {
-}
-
 #content3 {
+  margin-top: -385px;
+}
+
+#content5 {
+  margin-top: -385px;
+}
+
+#content7 {
   margin-top: -385px;
 }
 
@@ -73,20 +75,14 @@ body {
   transition: all 0.3s;
 }
 
-#instructions1 {
+.instructionsA {
   width: 568px;
   position: absolute;
   left: calc(50% - (568px / 2));
 }
 
-#instructions2 {
+.instructionsB {
   text-align: center;
-}
-
-#instructions3 {
-  width: 568px;
-  position: absolute;
-  left: calc(50% - (568px / 2));
 }
 
 .inputs {
