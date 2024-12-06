@@ -12,9 +12,17 @@ function next_step() {
   if (steps_on_password.includes(current_step)) {
     check_password(current_step);
   } else if (current_step + 1 <= steps - 1) {
-      load_step(current_step + 1);
-    }
+    load_step(current_step + 1);
+  } else if (current_step == steps - 1) {
+    confetti();
+  }
 }
+
+window.addEventListener("keypress", function (e) {
+  if (e.key == "Enter") {
+    next_step();
+  }
+});
 
 function load_step(step_to_load) {
   document.getElementById(
@@ -43,6 +51,9 @@ function load_step(step_to_load) {
   ).style.opacity = "1";
 
   current_step = step_to_load;
+  if (current_step == steps - 1) {
+    confetti();
+  }
 }
 
 function check_password(step_to_check) {
@@ -80,6 +91,34 @@ function check_password(step_to_check) {
       "input" + String(parseInt(steps_on_password.indexOf(step_to_check) + 1))
     ).style.animation = "incorrect_input_shake 0.4s";
   }
+}
+
+function confetti() {
+  var confetti_div = "";
+  var confetti_colors = [
+    "#ff554d",
+    "#ffd84d",
+    "#4d97ff",
+    "#a04dff",
+    "#ff4df9",
+    "#7aff70",
+  ];
+  for (var i = 0; i < document.body.clientWidth / 80; i++) {
+    confetti_div =
+      confetti_div +
+      '<div style="width:70px;height:30px;position:absolute;left:' +
+      String(parseInt(i * 80)) +
+      "px;background:" +
+      confetti_colors[Math.floor(Math.random() * confetti_colors.length)] +
+      ";transform:rotate(" +
+      String(parseInt(Math.floor(Math.random() * (15 - -15 + 1)) + -15)) +
+      "deg);animation:confetti_animation " +
+      String(parseInt(Math.floor(Math.random() * 3) + 4)) +
+      "s;animation-delay:" +
+      String(parseInt(Math.floor(Math.random() * 0.5))) +
+      's;visibility:hidden;top:0px;margin-top:0px;"></div>';
+  }
+  document.getElementById("confetti").innerHTML = confetti_div;
 }
 
 function background_generate() {

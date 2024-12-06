@@ -102,7 +102,7 @@ body {
   left: calc(50% - (277px / 2));
   margin-top: 60px;
   font-size: 22px;
-  color: #E8E8E8;
+  color: #e8e8e8;
   text-indent: 14px;
 }
 
@@ -118,6 +118,12 @@ body {
   height: 66px;
   border-radius: 100px;
   background: #329f35;
+  transition: 0.4s;
+}
+
+.button_background:hover {
+  box-shadow: 0px 0px 17.3px 0px #329f35;
+  transition: 0.4s;
 }
 
 #button_next {
@@ -132,13 +138,21 @@ body {
   top: calc(50% - (24px / 2));
 }
 
+#win_text {
+  font-size: 27px;
+  font-weight: 402;
+  text-shadow: 0px 0px 10.9px #e8e8e89e;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
 .qr_fix {
   image-rendering: crisp-edges;
 }
 
 @supports not (image-rendering: crisp-edges) {
   .qr_fix {
-      image-rendering: pixelated;
+    image-rendering: pixelated;
   }
 }
 
@@ -212,5 +226,19 @@ body {
 
   100% {
     transform: translate(0px, 0px);
+  }
+}
+
+@keyframes confetti_animation {
+  0% {
+    visibility: visible;
+    top: -110px;
+  }
+  80% {
+    top: 70vh;
+  }
+  100% {
+    top: 80vh;
+    opacity: 0;
   }
 }

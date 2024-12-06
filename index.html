@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- start content6 -->
       <div id="content6" style="visibility: hidden">
         <div class="step">Krok <span class="step_index">6</span></div>
@@ -100,57 +100,62 @@
           class="inputs"
           placeholder="XXXXXX"
           oninput="this.value = this.value.toUpperCase()"
-          />
-          <div id="input3_return" class="input_returns"></div>
+        />
+        <div id="input3_return" class="input_returns"></div>
+      </div>
+
+      <!-- start content7 -->
+      <div id="content7" style="visibility: hidden">
+        <div class="step">Krok <span class="step_index">7</span></div>
+        <div class="instructions instructionsA" id="instructions7">
+          zeskanuj poniższy kod QR, aby przejść do kolejnego etapu
         </div>
-        
-        <!-- start content7 -->
-        <div id="content7" style="visibility: hidden">
-          <div class="step">Krok <span class="step_index">7</span></div>
-          <div class="instructions instructionsA" id="instructions7">
-            zeskanuj poniższy kod QR, aby przejść do kolejnego etapu
-          </div>
-          <div class="glass_qr">
-            <div class="qr">
-              <img class="qr_picture qr_fix" src="puzzles/memory_qr.png" alt="QR" />
-            </div>
+        <div class="glass_qr">
+          <div class="qr">
+            <img
+              class="qr_picture qr_fix"
+              src="puzzles/memory_qr.png"
+              alt="QR"
+            />
           </div>
         </div>
-        
-        <!-- start content8 -->
-        <div id="content8" style="visibility: hidden">
-          <div class="step">Krok <span class="step_index">8</span></div>
-          <div class="instructions instructionsB" id="instructions8">
-            wprowadź kod z poprzedniego etapu
-          </div>
-          <input
+      </div>
+
+      <!-- start content8 -->
+      <div id="content8" style="visibility: hidden">
+        <div class="step">Krok <span class="step_index">8</span></div>
+        <div class="instructions instructionsB" id="instructions8">
+          wprowadź kod z poprzedniego etapu
+        </div>
+        <input
           id="input4"
           type="text"
           class="inputs"
           placeholder="XXXXXX"
           oninput="this.value = this.value.toUpperCase()"
-          />
-          <div id="input4_return" class="input_returns"></div>
-        </div>
+        />
+        <div id="input4_return" class="input_returns"></div>
+      </div>
 
-        <!-- start content9 -->
-        <div id="content9" style="visibility: hidden">
-          <div class="step">Krok <span class="step_index">9</span></div>
-          <div class="instructions instructionsA" id="instructions9">
-            GRATULACJE WYGRAŁEŚ!!!
-          </div>
+      <!-- start content9 -->
+      <div id="content9" style="visibility: hidden">
+        <div id="confetti"></div>
+        <div class="step">Krok <span class="step_index">9</span></div>
+        <div class="instructions instructionsA" id="instructions9">
+          <div id="win_text">GRATULACJE WYGRAŁEŚ!!!</div>
         </div>
       </div>
-      <div id="button_next" onclick="next_step();">
-        <div class="button_background">
-          <div id="button_arrow">
-            <svg
+    </div>
+    <div id="button_next" onclick="next_step();">
+      <div class="button_background">
+        <div id="button_arrow">
+          <svg
             width="36"
             height="24"
             viewBox="0 0 36 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            >
+          >
             <path
               d="M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807612 23.9792 0.807612 23.3934 1.3934C22.8076 1.97918 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM2 13.5H34V10.5H2V13.5Z"
               fill="white"
