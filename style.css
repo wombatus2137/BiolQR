@@ -4,8 +4,7 @@ body {
   background: #1a1d1a;
   font-family: "Work Sans", sans-serif;
   height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #content {
