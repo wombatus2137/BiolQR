@@ -1,2 +1,2 @@
 # BiolQR
-Konkurs biologiczny z wykorzystaniem kodów QR.
+School project - Konkurs biologiczny z wykorzystaniem kodów QR.
